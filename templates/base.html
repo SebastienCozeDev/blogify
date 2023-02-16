@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+        <title>Blog</title>
+    {% endblock %}
+</head>
+<body>
+    <section id="blog">
+        {% blog content %}
+        {% endblock %}
+    </section>
+</body>
+</html>
