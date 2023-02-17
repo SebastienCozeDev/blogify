@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Blog - {{ post.title }}</title>
+{% endblock %}
+
+{% block content %}
+    <h1>{{ post.title }}</h1>
+    <article>
+        <h2>{{ post.title }}</h2>
+        <h5>Publié par <i>{{ post.author_or_default }}</i> le {{ post.created_on|date:'j F Y' }}</h5>
+        <p>{{ post.content|linebreaks|safe }}</p>
+    </article>
+{% endblock %}
