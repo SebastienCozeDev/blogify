@@ -64,4 +64,3 @@ python manage.py createsuperuser
 cd src
 python manage.py runserver
 ```
-
