@@ -3,3 +3,4 @@
 src/blog/__pycache__
 src/posts/__pycache__
 src/posts/migrations/__pycache__
+src/blog/.env
