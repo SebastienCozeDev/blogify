@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
+from django.utils.decorators import method_decorator
 from django.views.generic import ListView, CreateView, UpdateView, DetailView, DeleteView
 
 from posts.models import BlogPost
@@ -16,6 +17,7 @@ class BlogHome(ListView):
         return queryset.filter(published=True)
 
 
+@method_decorator(login_required, name='dispatch')
 class BlogPostCreate(CreateView):
     model = BlogPost
     template_name = 'posts/blogpost_create.html'
@@ -25,6 +27,7 @@ class BlogPostCreate(CreateView):
     ]
 
 
+@method_decorator(login_required, name='dispatch')
 class BlogPostUpdate(UpdateView):
     model = BlogPost
     template_name = 'posts/blogpost_edit.html'
@@ -40,6 +43,7 @@ class BlogPostDetail(DetailView):
     context_object_name = 'post'
 
 
+@method_decorator(login_required, name='dispatch')
 class BlogPostDelete(DeleteView):
     model = BlogPost
     success_url = reverse_lazy('posts:home')
