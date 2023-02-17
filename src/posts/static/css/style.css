@@ -12,6 +12,13 @@ nav {
     justify-content: space-around;
 }
 
+h1 {
+    font-size: 5em;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 #blog {
     align-items: center;
     display: flex;
@@ -70,4 +77,20 @@ nav {
 
 .post-detail > h5 {
     margin-bottom: 1rem;
+}
+
+input, textarea {
+    display: block;
+    border: 1px solid #CED4DA;
+    border-radius: .25rem;
+    font-size: 1rem;
+    min-width: 600px;
+    padding: .75rem;
+    line-height: 1.5;
+}
+
+label {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 1rem 0;
 }
