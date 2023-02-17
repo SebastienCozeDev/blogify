@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-    <h1>{{ post.title }}</h1>
+    <h2>{{ post.title }}</h2>
     <article>
         <h2>{{ post.title }}</h2>
         <h5>Publié par <i>{{ post.author_or_default }}</i> le {{ post.created_on|date:'j F Y' }}</h5>
