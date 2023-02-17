@@ -7,6 +7,7 @@
 {% block content %}
     <article class="post-detail">
         <h2>{{ post.title }}</h2>
+        <img src="{{ post.thumbnail.url }}" alt="Image décrivant l'article">
         <h5>Publié par <i>{{ post.author_or_default }}</i> le {{ post.created_on|date:'j F Y' }}</h5>
         <p>{{ post.content|linebreaks|safe }}</p>
     </article>

@@ -19,6 +19,7 @@ source .env/bin/activate
 ```shell
 pip install Django==4.1.7
 pip install psycopg2==2.8.6
+pip install Pillow==9.4.0
 ```
 
 Pour le package `psycopg2`, assurez-vous d'avoir `libpq-dev` à jour avec le commande suivante.
